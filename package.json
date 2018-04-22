@@ -5,7 +5,6 @@
   "scripts": {
     "ng": "ng",
     "build": "npm run env -s && ng build --prod",
-    "start": "npm run env -s && ng serve --aot --proxy-config proxy.conf.js",
     "serve:sw": "npm run build -s && npx http-server ./dist -p",
     "lint": "ng lint --type-check && stylelint \"src/**/*.scss\" --syntax scss && htmlhint \"src\" --config .htmlhintrc",
     "test": "npm run env -s && ng test",
@@ -14,7 +13,10 @@
     "translations:extract": "ngx-translate-extract --input ./src --output ./src/translations/template.json --format=json --clean -sort --marker extract",
     "docs": "hads ./docs -o",
     "env": "ngx-scripts env npm_package_version",
-    "generate": "ng generate"
+    "generate": "ng generate",
+    "start": "http-server",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build && mv dist/* ."
   },
   "dependencies": {
     "@angular/animations": "^5.2.5",
