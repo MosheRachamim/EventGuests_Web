@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
-    "start": "npm start"
+    "start": "npm run"
   },
   "dependencies": {
     "@angular/animations": "^5.2.5",
