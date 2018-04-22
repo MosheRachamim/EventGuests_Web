@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
       .subscribe((quote: string) => { this.quote = quote; });
 
     $.ajax({
-       url: "http://eventguests-server.herokuapp.com/wizelyapi1/gettablesstats?event_id=1",
+       url: "https://eventguests-server.herokuapp.com/wizelyapi1/gettablesstats?event_id=1",
 //      url: "http://212.179.232.90:1337/wizelyapi1/gettablesstats?event_id=1",
       data: null,
       async: false,
