@@ -31,8 +31,8 @@ export class AppComponent implements OnInit {
     this.isLoading = true;
 
     var data = $.ajax({
-     //        url: "https://eventguests-server.herokuapp.com/wizelyapi1/gettablesstats?event_id=1",
-      url: "http://212.179.232.90:1337/wizelyapi1/gettablesstats?event_id=1",
+             url: "https://eventguests-server.herokuapp.com/wizelyapi1/gettablesstats?event_id=1",
+     // url: "http://212.179.232.90:1337/wizelyapi1/gettablesstats?event_id=1",
       data: null,
       async: false,
       contentType: 'application/json',
