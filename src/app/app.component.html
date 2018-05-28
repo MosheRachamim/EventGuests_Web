@@ -969,7 +969,7 @@
 														</div>
 													</div>
 													<ol class="dd-list" style="display: none">
-														<li class="dd-item" data-id="3" *ngFor="let guestData of tableData.guests">
+														<li class="dd-item dd-nodrag" data-id="3" *ngFor="let guestData of tableData.guests">
 															<div class="dd-handle" [class.guestArrived]="guestData.num_guests>0 && guestData.num_guests== guestData.new_num_guests">
 																{{guestData.name}}
 																<em class="label pull-right label-default">
