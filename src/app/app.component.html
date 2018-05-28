@@ -1,4 +1,4 @@
-﻿<!-- HEADER -->
+<!-- HEADER -->
 <header id="header" style="display: none">
 	<div id="logo-group">
 
@@ -295,7 +295,7 @@
 
 <!-- Left panel : Navigation area -->
 <!-- Note: This width of the aside area can be adjusted through LESS variables -->
-<aside id="left-panel"  style="display: none">
+<aside id="left-panel" style="display: none">
 
 	<!-- User info -->
 	<div class="login-info">
@@ -949,10 +949,10 @@
 														</h4>
 														<span></span>
 														<div class="air air-top-right padding-7">
-															<em class="label pull-right label-danger">
+															<em class="label pull-right label-default">
 																סה"כ אישרו: {{tableData.approved}}
 															</em>
-															<em class="label pull-right label-success" style="margin-right: 2px">
+															<em class="label pull-right label-primary" style="margin-right: 2px">
 																סה"כ הגיעו: {{tableData.arrived}}
 															</em>
 															<div class="easy-pie-chart text-danger easyPieChart" data-percent="33" data-pie-size="40" data-pie-track-color="rgba(169, 3, 41,0.07)"
@@ -964,12 +964,12 @@
 													</div>
 													<ol class="dd-list" style="display: none">
 														<li class="dd-item" data-id="3" *ngFor="let guestData of tableData.guests">
-															<div class="dd-handle">
+															<div class="dd-handle" [class.guestArrived]="guestData.num_guests>0 && guestData.num_guests== guestData.new_num_guests">
 																{{guestData.name}}
-																<em class="label pull-right label-danger">
+																<em class="label pull-right label-default">
 																	אישרו: {{guestData.num_guests}}
 																</em>
-																<em class="label pull-right label-success" style="margin-right: 2px">
+																<em class="label pull-right label-primary" style="margin-right: 2px">
 																	הגיעו: {{guestData.new_num_guests}}
 																</em>
 
